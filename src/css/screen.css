@@ -1,0 +1,377 @@
+@font-face {
+  font-family: 'DSEG-7 Regular';
+  src: url("//ortonomy.co/static/fonts/DSEG7ClassicMini-Regular.ttf"); }
+@font-face {
+  font-family: 'Circular Book';
+  src: url(//ortonomy.co/static/fonts/lineto-circular-book.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Circular Black';
+  font-style: normal;
+  font-weight: bold;
+  src: url(//ortonomy.co/static/fonts/lineto-circular-black.ttf) format("truetype"); }
+body {
+  background: #ff4c4c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.container {
+  position: relative; }
+
+.quarter {
+  box-shadow:  1px 1px rgba(162, 162, 162, 0.5) , 2px 2px rgba(165, 165, 165, 0.50667) , 3px 3px rgba(168, 168, 168, 0.51333) , 4px 4px rgba(170, 170, 170, 0.52) , 5px 5px rgba(173, 173, 173, 0.52667) , 6px 6px rgba(175, 175, 175, 0.53333) , 7px 7px rgba(178, 178, 178, 0.54) , 8px 8px rgba(180, 180, 180, 0.54667) , 9px 9px rgba(182, 182, 182, 0.55333) , 10px 10px rgba(184, 184, 184, 0.56) , 11px 11px rgba(186, 186, 186, 0.56667) , 12px 12px rgba(188, 188, 188, 0.57333) , 13px 13px rgba(190, 190, 190, 0.58) , 14px 14px rgba(191, 191, 191, 0.58667) , 15px 15px rgba(193, 193, 193, 0.59333) , 16px 16px rgba(195, 195, 195, 0.6) , 17px 17px rgba(196, 196, 196, 0.60667) , 18px 18px rgba(198, 198, 198, 0.61333) , 19px 19px rgba(199, 199, 199, 0.62) , 20px 20px rgba(200, 200, 200, 0.62667) , 21px 21px rgba(202, 202, 202, 0.63333) , 22px 22px rgba(203, 203, 203, 0.64) , 23px 23px rgba(204, 204, 204, 0.64667) , 24px 24px rgba(205, 205, 205, 0.65333) , 25px 25px rgba(206, 206, 206, 0.66) , 26px 26px rgba(208, 208, 208, 0.66667) , 27px 27px rgba(209, 209, 209, 0.67333) , 28px 28px rgba(210, 210, 210, 0.68) , 29px 29px rgba(211, 211, 211, 0.68667) , 30px 30px rgba(212, 212, 212, 0.69333) , 31px 31px rgba(213, 213, 213, 0.7) , 32px 32px rgba(214, 214, 214, 0.70667) , 33px 33px rgba(214, 214, 214, 0.71333) , 34px 34px rgba(215, 215, 215, 0.72) , 35px 35px rgba(216, 216, 216, 0.72667) , 36px 36px rgba(217, 217, 217, 0.73333) , 37px 37px rgba(218, 218, 218, 0.74) , 38px 38px rgba(219, 219, 219, 0.74667) , 39px 39px rgba(219, 219, 219, 0.75333) , 40px 40px rgba(220, 220, 220, 0.76) , 41px 41px rgba(221, 221, 221, 0.76667) , 42px 42px rgba(222, 222, 222, 0.77333) , 43px 43px rgba(222, 222, 222, 0.78) , 44px 44px rgba(223, 223, 223, 0.78667) , 45px 45px rgba(224, 224, 224, 0.79333) , 46px 46px rgba(224, 224, 224, 0.8) , 47px 47px rgba(225, 225, 225, 0.80667) , 48px 48px rgba(225, 225, 225, 0.81333) , 49px 49px rgba(226, 226, 226, 0.82) , 50px 50px rgba(227, 227, 227, 0.82667) , 51px 51px rgba(227, 227, 227, 0.83333) , 52px 52px rgba(228, 228, 228, 0.84) , 53px 53px rgba(228, 228, 228, 0.84667) , 54px 54px rgba(229, 229, 229, 0.85333) , 55px 55px rgba(229, 229, 229, 0.86) , 56px 56px rgba(230, 230, 230, 0.86667) , 57px 57px rgba(230, 230, 230, 0.87333) , 58px 58px rgba(231, 231, 231, 0.88) , 59px 59px rgba(231, 231, 231, 0.88667) , 60px 60px rgba(232, 232, 232, 0.89333) , 61px 61px rgba(232, 232, 232, 0.9) , 62px 62px rgba(233, 233, 233, 0.90667) , 63px 63px rgba(233, 233, 233, 0.91333) , 64px 64px rgba(233, 233, 233, 0.92) , 65px 65px rgba(234, 234, 234, 0.92667) , 66px 66px rgba(234, 234, 234, 0.93333) , 67px 67px rgba(235, 235, 235, 0.94) , 68px 68px rgba(235, 235, 235, 0.94667) , 69px 69px rgba(235, 235, 235, 0.95333) , 70px 70px rgba(236, 236, 236, 0.96) , 71px 71px rgba(236, 236, 236, 0.96667) , 72px 72px rgba(237, 237, 237, 0.97333) , 73px 73px rgba(237, 237, 237, 0.98) , 74px 74px rgba(237, 237, 237, 0.98667) , 75px 75px rgba(238, 238, 238, 0.99333);
+  cursor: pointer;
+  float: left;
+  position: relative; }
+  .quarter::before {
+    content: '';
+    position: absolute; }
+  .quarter::after {
+    content: '';
+    position: absolute; }
+  .quarter .segment-mask {
+    background: #333;
+    position: absolute; }
+
+.red-dim {
+  background: #9f0f17; }
+  .red-dim:active {
+    background: #ff4c4c; }
+
+.blue-dim {
+  background: #094a8f; }
+  .blue-dim:active {
+    background: #1c8cff; }
+
+.yellow-dim {
+  background: #cca707; }
+  .yellow-dim:active {
+    background: #fed93f; }
+
+.green-dim {
+  background: #00a74a; }
+  .green-dim:active {
+    background: #13ff7c; }
+
+.top-left {
+  border-radius: 100% 0 0; }
+  .top-left::before {
+    border-radius: 100% 0 0; }
+  .top-left .segment-mask {
+    border-radius: 100% 0 0;
+    bottom: 0;
+    right: 0; }
+
+.top-right {
+  border-radius: 0 100% 0 0; }
+  .top-right::before {
+    border-radius: 0 100% 0 0; }
+  .top-right .segment-mask {
+    border-radius: 0 100% 0 0;
+    bottom: 0;
+    left: 0; }
+
+.bottom-left {
+  border-radius: 0 0 0 100%; }
+  .bottom-left::before {
+    border-radius: 0 0 0 100%; }
+  .bottom-left .segment-mask {
+    border-radius: 0 0 0 100%;
+    right: 0;
+    top: 0; }
+
+.bottom-right {
+  border-radius: 0 0 100%; }
+  .bottom-right::before {
+    border-radius: 0 0 100%; }
+  .bottom-right .segment-mask {
+    border-radius: 0 0 100%;
+    left: 0;
+    top: 0; }
+
+.controls {
+  background: #eee;
+  border-radius: 50%;
+  font-family: 'Circular Book';
+  position: absolute;
+  text-align: center; }
+  .controls .name {
+    font-family: 'Circular Black';
+    margin-after: 0;
+    text-transform: uppercase;
+    width: 100%; }
+  .controls .control {
+    display: inline-block;
+    width: 30%; }
+  .controls .display {
+    background: #000;
+    border-radius: 1vw;
+    color: #dc0d29;
+    font-family: 'DSEG-7 Regular';
+    font-size: 3.5vw;
+    height: 15%;
+    padding-top: 1.5vw;
+    position: relative;
+    text-align: center; }
+    .controls .display::after {
+      bottom: -3.5vw;
+      color: #000;
+      content: 'Count';
+      display: block;
+      font-family: 'Circular Book';
+      font-size: 3vw;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      text-transform: uppercase; }
+  .controls .start {
+    box-shadow:  1px 1px rgba(162, 162, 162, 0.5) , 2px 2px rgba(172, 172, 172, 0.525) , 3px 3px rgba(181, 181, 181, 0.55) , 4px 4px rgba(188, 188, 188, 0.575) , 5px 5px rgba(195, 195, 195, 0.6) , 6px 6px rgba(200, 200, 200, 0.625) , 7px 7px rgba(205, 205, 205, 0.65) , 8px 8px rgba(209, 209, 209, 0.675) , 9px 9px rgba(213, 213, 213, 0.7) , 10px 10px rgba(216, 216, 216, 0.725) , 11px 11px rgba(219, 219, 219, 0.75) , 12px 12px rgba(222, 222, 222, 0.775) , 13px 13px rgba(224, 224, 224, 0.8) , 14px 14px rgba(226, 226, 226, 0.825) , 15px 15px rgba(229, 229, 229, 0.85) , 16px 16px rgba(230, 230, 230, 0.875) , 17px 17px rgba(232, 232, 232, 0.9) , 18px 18px rgba(234, 234, 234, 0.925) , 19px 19px rgba(235, 235, 235, 0.95) , 20px 20px rgba(237, 237, 237, 0.975);
+    background: #fff;
+    border: 0.5vw solid #333;
+    border-radius: 50%;
+    height: 15%;
+    margin: 0 7.5%;
+    position: relative;
+    width: 15%; }
+    .controls .start:active {
+      background: #13ff7c;
+      box-shadow: none; }
+    .controls .start:focus {
+      outline: 0; }
+    .controls .start::after {
+      bottom: -5.2vw;
+      content: 'Start';
+      display: block;
+      font-family: 'Circular Book';
+      left: -2.2vw;
+      position: absolute;
+      text-align: center;
+      text-transform: uppercase; }
+  .controls .strict-wrapper {
+    width: 30%;
+    display: inline-block; }
+    .controls .strict-wrapper input[type=checkbox] {
+      display: none; }
+      .controls .strict-wrapper input[type=checkbox]:checked + label:before {
+        background: #ff4c4c;
+        box-shadow: none; }
+    .controls .strict-wrapper label.strict {
+      display: block;
+      position: relative;
+      width: 4.46vw;
+      height: 4.46vw; }
+      .controls .strict-wrapper label.strict::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        top: -.45vw;
+        border: 0.5vw solid #333;
+        box-shadow:  1px 1px rgba(162, 162, 162, 0.5) , 2px 2px rgba(172, 172, 172, 0.525) , 3px 3px rgba(181, 181, 181, 0.55) , 4px 4px rgba(188, 188, 188, 0.575) , 5px 5px rgba(195, 195, 195, 0.6) , 6px 6px rgba(200, 200, 200, 0.625) , 7px 7px rgba(205, 205, 205, 0.65) , 8px 8px rgba(209, 209, 209, 0.675) , 9px 9px rgba(213, 213, 213, 0.7) , 10px 10px rgba(216, 216, 216, 0.725) , 11px 11px rgba(219, 219, 219, 0.75) , 12px 12px rgba(222, 222, 222, 0.775) , 13px 13px rgba(224, 224, 224, 0.8) , 14px 14px rgba(226, 226, 226, 0.825) , 15px 15px rgba(229, 229, 229, 0.85) , 16px 16px rgba(230, 230, 230, 0.875) , 17px 17px rgba(232, 232, 232, 0.9) , 18px 18px rgba(234, 234, 234, 0.925) , 19px 19px rgba(235, 235, 235, 0.95) , 20px 20px rgba(237, 237, 237, 0.975);
+        background: #fff;
+        border-radius: 50%; }
+      .controls .strict-wrapper label.strict::after {
+        content: 'STRICT';
+        display: block;
+        position: absolute;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Circular Book';
+        font-size: 3vw;
+        top: 6.15vw; }
+
+@media (max-width: 640px) {
+  .container {
+    width: 80vw;
+    height: 80vw; }
+
+  .quarter {
+    float: left;
+    position: relative;
+    width: 40vw;
+    height: 40vw; }
+    .quarter::before {
+      width: 38vw;
+      height: 38vw; }
+    .quarter::after {
+      width: 38vw;
+      height: 38vw; }
+    .quarter .segment-mask {
+      width: 20vw;
+      height: 20vw; }
+
+  .top-left::before {
+    border-left: 2.1vw solid #333;
+    border-top: 2.1vw solid #333; }
+  .top-left::after {
+    border-right: 2.1vw solid #333;
+    border-bottom: 2.1vw solid #333; }
+
+  .top-right::before {
+    border-right: 2.1vw solid #333;
+    border-top: 2.1vw solid #333; }
+  .top-right::after {
+    border-left: 2.1vw solid #333;
+    border-bottom: 2.1vw solid #333; }
+
+  .bottom-left::before {
+    border-left: 2.1vw solid #333;
+    border-bottom: 2.1vw solid #333; }
+  .bottom-left::after {
+    border-right: 2.1vw solid #333;
+    border-top: 2.1vw solid #333; }
+
+  .bottom-right::before {
+    border-right: 2.1vw solid #333;
+    border-bottom: 2.1vw solid #333; }
+  .bottom-right::after {
+    border-left: 2.1vw solid #333;
+    border-top: 2.1vw solid #333; }
+
+  .controls {
+    width: 36vw;
+    height: 36vw;
+    top: 22vw;
+    left: 22vw; }
+    .controls .name {
+      margin: 4.7vw 0 0 0;
+      font-size: 8vw; }
+    .controls .start:after {
+      font-size: 3vw; } }
+@media (min-width: 641px) and (max-width: 924px) {
+  .container {
+    width: 80vw;
+    height: 80vw; }
+
+  .quarter {
+    float: left;
+    position: relative;
+    width: 40vw;
+    height: 40vw; }
+    .quarter::before {
+      width: 38vw;
+      height: 38vw; }
+    .quarter::after {
+      width: 38vw;
+      height: 38vw; }
+    .quarter .segment-mask {
+      width: 20vw;
+      height: 20vw; }
+
+  .top-left::before {
+    border-left: 2.1vw solid #333;
+    border-top: 2.1vw solid #333; }
+  .top-left::after {
+    border-right: 2.1vw solid #333;
+    border-bottom: 2.1vw solid #333; }
+
+  .top-right::before {
+    border-right: 2.1vw solid #333;
+    border-top: 2.1vw solid #333; }
+  .top-right::after {
+    border-left: 2.1vw solid #333;
+    border-bottom: 2.1vw solid #333; }
+
+  .bottom-left::before {
+    border-left: 2.1vw solid #333;
+    border-bottom: 2.1vw solid #333; }
+  .bottom-left::after {
+    border-right: 2.1vw solid #333;
+    border-top: 2.1vw solid #333; }
+
+  .bottom-right::before {
+    border-right: 2.1vw solid #333;
+    border-bottom: 2.1vw solid #333; }
+  .bottom-right::after {
+    border-left: 2.1vw solid #333;
+    border-top: 2.1vw solid #333; }
+
+  .controls {
+    width: 36vw;
+    height: 36vw;
+    top: 22vw;
+    left: 22vw; }
+    .controls .name {
+      margin: 4.5vw 0 0 0;
+      font-size: 8vw; }
+    .controls .start {
+      font-size: 3vw; }
+      .controls .start::after {
+        left: -2vw;
+        bottom: -5.1vw; } }
+@media (min-width: 925px) {
+  .container {
+    width: 46vw;
+    height: 46vw; }
+
+  .quarter {
+    float: left;
+    position: relative;
+    width: 23vw;
+    height: 23vw; }
+    .quarter::before {
+      width: 21.6vw;
+      height: 21.6vw; }
+    .quarter::after {
+      width: 21.6vw;
+      height: 21.6vw; }
+    .quarter .segment-mask {
+      width: 13vw;
+      height: 13vw; }
+
+  .top-left::before {
+    border-left: 1.5vw solid #333;
+    border-top: 1.5vw solid #333; }
+  .top-left::after {
+    border-right: 1.5vw solid #333;
+    border-bottom: 1.5vw solid #333; }
+
+  .top-right::before {
+    border-right: 1.5vw solid #333;
+    border-top: 1.5vw solid #333; }
+  .top-right::after {
+    border-left: 1.5vw solid #333;
+    border-bottom: 1.5vw solid #333; }
+
+  .bottom-left::before {
+    border-left: 1.5vw solid #333;
+    border-bottom: 1.5vw solid #333; }
+  .bottom-left::after {
+    border-right: 1.5vw solid #333;
+    border-top: 1.5vw solid #333; }
+
+  .bottom-right::before {
+    border-right: 1.5vw solid #333;
+    border-bottom: 1.5vw solid #333; }
+  .bottom-right::after {
+    border-left: 1.5vw solid #333;
+    border-top: 1.5vw solid #333; }
+
+  .controls {
+    width: 24vw;
+    height: 24vw;
+    top: 11vw;
+    left: 11vw; }
+    .controls .name {
+      margin: 3.5vw 0 0 0;
+      font-size: 5.5vw; }
+    .controls .display {
+      background: #000;
+      font-size: 2.5vw;
+      padding-top: .7vw;
+      color: #dc0d29;
+      text-align: center;
+      position: relative; }
+      .controls .display::after {
+        font-size: 2vw;
+        bottom: -2.5vw; }
+    .controls .start:after {
+      font-size: 2vw;
+      bottom: -3.5vw;
+      left: -1.6vw; } }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>simon-game | by @ortonomy_</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/vendor/normalize.min.css">
+    <link rel="stylesheet" href="/css/screen.css" media="screen,projection"><!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.html5 || document.write('<script src="scripts/vendor/html5shiv.js"><\/script>')</script>
+<![endif]-->
+  </head>
+  <body><!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <div class="container">
+      <div class="game-area">
+        <div class="quarter top-left green disabled">
+          <div class="segment-mask"></div>
+        </div>
+        <div class="quarter top-right red disabled">
+          <div class="segment-mask"></div>
+        </div>
+        <div class="quarter bottom-left yellow disabled">
+          <div class="segment-mask"></div>
+        </div>
+        <div class="quarter bottom-right blue disabled">
+          <div class="segment-mask"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="title-wrapper">
+          <p class="name">Simon</p>
+        </div>
+        <div class="main-controls-wrapper">
+          <div class="control-components-wrapper">
+            <div class="control-component-wrapper">
+              <div class="display control"><span class="count-text">!!!</span></div>
+            </div>
+            <div class="control-component-wrapper disabled">
+              <button class="start control"></button>
+            </div>
+            <div class="control-component-wrapper disabled">
+              <input class="strict control" id="strict" type="checkbox">
+              <label class="strict label" for="strict"></label>
+            </div>
+          </div>
+          <div class="control-labels-wrapper">
+            <div class="control-label-wrapper"><span class="control-label">count</span></div>
+            <div class="control-label-wrapper"><span class="control-label">start</span></div>
+            <div class="control-label-wrapper"><span class="control-label">strict</span></div>
+          </div>
+        </div>
+        <div class="main-controls-wrapper">
+          <div class="control-components-wrapper">
+            <div class="control-component-wrapper">
+              <input class="power control" id="power" type="checkbox">
+              <label class="power label" for="power"></label>
+            </div>
+          </div>
+          <div class="control-labels-wrapper">
+            <div class="control-label-wrapper"><span class="control-label">power</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-wrapper"><a href="" target="_top"><img class="logo" src="images/ortonomy.svg"></a></div>
+    <div class="github-wrapper"><a href="https://github.com/ortonomy/simon-game" target="_blank"><img class="github" src="images/github.svg"></a></div>
+    <div class="hidden-font">hidden</div>
+    <script src="scripts/app.min.js"></script>
+    <script src="https://use.fontawesome.com/c4ada93378.js"></script>
+  </body>
+</html>

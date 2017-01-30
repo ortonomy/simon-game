@@ -1,0 +1,25 @@
+// long-shadow mixin courtesty of Roikles http://codepen.io/roikles/
+// http://codepen.io/roikles/pen/xbydH
+//
+// * A Long-shadow mixin, guaranteed to make your Dribbble shots 11% cooler
+// * @param  string  $color_a  The darkest colour (closest the object)
+// * @param  string  $color_b  The lightest colour (often the background colour)
+// * @param  int     $stepnum  Number of steps
+// * @param  int     $opacity  The opacity of the blend
+// * @return list         	   Returns a list ready to drop into 'box-shadow' or text-shadow
+
+@function longshadow($color-a, $color-b, $stepnum, $opacity: 1) {
+
+    $gradient-steps: null;
+
+    @for $i from 1 through $stepnum {
+        $weight: (($i - 1) / $stepnum) * 100;
+        $colour-mix: mix($color-b, rgba($color-a, $opacity), $weight);
+        $seperator: null;
+        @if($i != $stepnum){
+			$seperator: #{','};
+		}
+        $gradient-steps: append(unquote("#{$gradient-steps}"), #{$i}px #{$i}px $colour-mix $seperator);
+  	}
+    @return $gradient-steps;
+}

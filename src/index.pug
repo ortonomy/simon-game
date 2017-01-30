@@ -1,0 +1,66 @@
+doctype html
+html
+    head
+        title simon-game | by @ortonomy_
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+        meta(name="description", content="")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/vendor/normalize.min.css")
+        link(rel="stylesheet", href="/css/screen.css", media="screen,projection")
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script>window.html5 || document.write('<script src="scripts/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    body
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        .container
+            .game-area
+                .quarter.top-left.green.disabled
+                    .segment-mask
+                .quarter.top-right.red.disabled
+                    .segment-mask
+                .quarter.bottom-left.yellow.disabled
+                    .segment-mask
+                .quarter.bottom-right.blue.disabled
+                    .segment-mask
+            .controls
+                .title-wrapper
+                    p.name Simon
+                .main-controls-wrapper
+                    .control-components-wrapper
+                        .control-component-wrapper
+                            .display.control
+                                span.count-text !!!
+                        .control-component-wrapper.disabled
+                            button.start.control
+                        .control-component-wrapper.disabled
+                            input.strict.control#strict(type='checkbox')
+                            label.strict.label(for='strict')
+                    .control-labels-wrapper
+                        .control-label-wrapper
+                            span.control-label count
+                        .control-label-wrapper
+                            span.control-label start
+                        .control-label-wrapper
+                            span.control-label strict
+                .main-controls-wrapper
+                    .control-components-wrapper
+                        .control-component-wrapper
+                            input.power.control#power(type='checkbox')
+                            label.power.label(for='power')
+                    .control-labels-wrapper
+                        .control-label-wrapper
+                            span.control-label power
+        .logo-wrapper
+            a(href='', target='_top')
+                img.logo(src='images/ortonomy.svg')
+        .github-wrapper
+            a(href='https://github.com/ortonomy/simon-game', target='_blank')
+                img.github(src='images/github.svg')
+        .hidden-font hidden
+        script(src="scripts/app.min.js")
+        script(src="https://use.fontawesome.com/c4ada93378.js")

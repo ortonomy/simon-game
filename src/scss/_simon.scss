@@ -1,0 +1,137 @@
+// fonts
+
+@font-face {
+    font-family: 'DSEG-7 Regular';
+    src: url('//ortonomy.co/static/fonts/DSEG7ClassicMini-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Circular Book';
+    src: url(//ortonomy.co/static/fonts/lineto-circular-book.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Circular Black';
+    font-style: normal;
+    font-weight: bold;
+    src: url(//ortonomy.co/static/fonts/lineto-circular-black.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Freight Text Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url(//ortonomy.co/static/fonts/freight-text-book.ttf) format('truetype');
+}
+
+.hidden-font {
+    display: none;
+    font-family: 'Freight Text book', Georgia, serif;
+}
+
+// mixins for repeated css
+@mixin quarter-borders ($border-size, $border-type, $border-color) {
+    .top-left {
+
+        &::before {
+            border-left: $border-size $border-type $border-color;
+            border-top: $border-size $border-type $border-color;
+		}
+
+        &::after {
+            border-bottom: $border-size $border-type $border-color;
+            border-right: $border-size $border-type $border-color;
+		}
+	}
+
+    .top-right {
+
+        &::before {
+            border-right: $border-size $border-type $border-color;
+            border-top: $border-size $border-type $border-color;
+		}
+
+        &::after {
+            border-bottom: $border-size $border-type $border-color;
+            border-left: $border-size $border-type $border-color;
+		}
+	}
+
+    .bottom-left {
+
+        &::before {
+            border-bottom: $border-size $border-type $border-color;
+            border-left: $border-size $border-type $border-color;
+		}
+
+        &::after {
+            border-right: $border-size $border-type $border-color;
+            border-top: $border-size $border-type $border-color;
+		}
+	}
+
+    .bottom-right {
+
+        &::before {
+            border-bottom: $border-size $border-type $border-color;
+            border-right: $border-size $border-type $border-color;
+		}
+
+        &::after {
+            border-left: $border-size $border-type $border-color;
+            border-top: $border-size $border-type $border-color;
+		}
+	}
+}
+
+@mixin light ($red, $red-bright, $green, $green-bright, $blue, $blue-bright, $red, $red-bright) {
+
+    .red {
+        background: $red;
+
+        &:active {
+            background: $red-bright;
+    	}
+    }
+
+    .red-light {
+        background: $red-bright;
+    }
+
+    .blue {
+        background: $blue;
+
+        &:active {
+            background: $blue-bright;
+    	}
+    }
+
+    .blue-light {
+        background: $blue-bright;
+    }
+
+    .yellow {
+        background: $yellow;
+
+        &:active {
+            background: $yellow-bright;
+    	}
+    }
+
+    .yellow-light {
+        background: $yellow-bright;
+    }
+
+    .green {
+        background: $green;
+
+        &:active {
+            background: $green-bright;
+    	}
+    }
+
+    .green-light {
+        background: $green-bright;
+    }
+}

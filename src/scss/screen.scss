@@ -1,0 +1,701 @@
+// Welcome to Compass.
+// In this file you should write your main styles. (or centralize your imports)
+// Import this file using the following HTML or equivalent:
+// <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import 'compass';
+@import 'long-shadow';
+@import 'simon';
+
+// colours
+$blue: #094a8f;
+$blue-bright: #1c8cff;
+$green: #00a74a;
+$green-bright: #13ff7c;
+$red: #9f0f17;
+$red-bright: #ff4c4c;
+$yellow: #cca707;
+$yellow-bright: #fed93f;
+$bg: #eee;
+$snow: #fff;
+$noir: #000;
+$solid-shadow: #333;
+$shadow: rgba(51, 51, 51, .5);
+$no-shadow: rgba(0, 0, 0, 0);
+$display-red: #dc0d29;
+
+body {
+    background: $bg;
+    display: flex;
+    justify-content: center;
+    -webkit-tap-highlight-color: $no-shadow; //remove grey highlighting of taps in iOS safari;
+}
+
+.logo {
+    left: 0;
+    position: fixed;
+    top: 0;
+}
+
+.github {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.container {
+    cursor: default;
+    position: relative;
+    user-select: none;
+
+    .game-area {
+        height: 100%;
+        width: 100%;
+    }
+
+    .disabled {
+        pointer-events: none;
+    }
+}
+
+
+
+.quarter {
+    @include box-shadow(longshadow(darken($bg, 30%), $bg, 75, .5));
+    cursor: pointer;
+    float: left;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+    }
+
+    .segment-mask {
+        background: $solid-shadow;
+        position: absolute;
+	}
+}
+
+.top-left {
+    border-radius: 100% 0 0;
+
+    &::before {
+        border-radius: 100% 0 0;
+	}
+
+    .segment-mask {
+        border-radius: 100% 0 0;
+        bottom: 0;
+        right: 0;
+	}
+}
+
+.top-right {
+    border-radius: 0 100% 0 0;
+
+    &::before {
+        border-radius: 0 100% 0 0;
+	}
+
+    .segment-mask {
+        border-radius: 0 100% 0 0;
+        bottom: 0;
+        left: 0;
+	}
+}
+
+.bottom-left {
+    border-radius: 0 0 0 100%;
+
+    &::before {
+        border-radius: 0 0 0 100%;
+	}
+
+    .segment-mask {
+        border-radius: 0 0 0 100%;
+        right: 0;
+        top: 0;
+	}
+}
+
+.bottom-right {
+    border-radius: 0 0 100%;
+
+    &::before {
+        border-radius: 0 0 100%;
+	}
+
+    .segment-mask {
+        border-radius: 0 0 100%;
+        left: 0;
+        top: 0;
+	}
+}
+
+@include light ($red, $red-bright, $green, $green-bright, $blue, $blue-bright, $red, $red-bright);
+
+.controls {
+    background: $bg;
+    border-radius: 50%;
+    font-family: 'Circular Book';
+    position: absolute;
+    text-align: center;
+
+    .name {
+        font-family: 'Circular Black';
+        margin-after: 0;
+        text-transform: uppercase;
+        width: 100%;
+	}
+
+    .main-controls-wrapper {
+        width: 100%;
+
+        .control-components-wrapper {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .control-component-wrapper {
+            width: 30%;
+        }
+
+        .control-labels-wrapper {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .control-label-wrapper {
+            width: 30%;
+            z-index: 1;
+        }
+
+    }
+
+    .control.display {
+        background: $noir;
+        color: $display-red;
+        font-family: 'DSEG-7 Regular';
+        position: relative;
+
+        .count-text {
+            display: block;
+        }
+    }
+
+    .control.start {
+        background: $snow;
+        border-radius: 50%;
+        padding: 0;
+        position: relative;
+
+        &:active {
+            background: $green-bright;
+            box-shadow: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .control.strict,
+    .control.power {
+        &[type=checkbox] {
+            display: none;
+        }
+
+        &[type=checkbox]:checked + label::before {
+            background: $green-bright;
+            box-shadow: none;
+        }
+    }
+
+    .label.strict,
+    .label.power {
+        position: relative;
+
+        &::before {
+            background: $snow;
+            border-radius: 50%;
+            content: '';
+            cursor: pointer;
+            display: inline-block;
+        }
+    }
+
+    .control-label {
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .container {
+        height: 94vw;
+        width: 94vw;
+	}
+
+    .quarter {
+        float: left;
+        height: 47vw;
+        position: relative;
+        width: 47vw;
+
+        &::before {
+            height: 45vw;
+            width: 45vw;
+		}
+
+        &::after {
+            height: 45vw;
+            width: 45vw;
+		}
+
+        .segment-mask {
+            height: 25vw;
+            width: 25vw;
+		}
+	}
+
+    .controls {
+        height: 22vw * 2;
+        left: 25vw;
+        top: 25vw;
+        width: 22vw * 2;
+
+        .name {
+            font-size: 9vw;
+            margin: 6vw 0 0;
+    	}
+
+        .main-controls-wrapper {
+
+            &:nth-child(3) {
+                margin-top: 2vw;
+            }
+        }
+
+        .control.display {
+            border-radius: 1vw;
+            margin-left: 1vw;
+
+            .count-text {
+                font-size: 3.5vw;
+                padding: 1.5vw;
+            }
+        }
+
+        .control.start {
+            @include box-shadow(longshadow(darken($bg, 30%), $bg, 10, .5));
+            border: .3vw solid $solid-shadow;
+            height: 6.3vw;
+            padding: 0;
+            width: 6.3vw;
+        }
+
+        .label.strict,
+        .label.power {
+
+            &::before {
+                @include box-shadow(longshadow(darken($bg, 30%), $bg, 10, .5));
+                border: .3vw solid $solid-shadow;
+                height: 5.6vw;
+                width: 5.6vw;
+            }
+        }
+
+        .control-label {
+            display: block;
+            font-size: 2.5vw;
+            margin-top: .4vw;
+        }
+    }
+
+    .modal-overlay {
+
+        .info-wrapper {
+            border-radius: 3vw;
+            box-shadow: 0 1vw 5vw 0 $shadow;
+            height: 50%;
+            margin: 2vw;
+            max-width: 100%;
+            padding: 0 2vw 2vw;
+
+            .project-info-text {
+                font-size: 4vw;
+                line-height: 6vw;
+            }
+
+            .project-details-wrapper {
+                padding: 0 4vw;
+            }
+
+            .project-title {
+                border-radius: 1.5vw;
+                font-size: 4.5vw;
+                letter-spacing: 3vw;
+                padding: 1vw;
+            }
+
+            .project-subtitle {
+                padding: 1vw;
+            }
+
+            .contact-wrapper {
+                padding: .5vw 0 0;
+            }
+
+            .contact-link {
+                font-size: 8vw;
+                padding: 1vw;
+            }
+
+            .contact-signature {
+                width: 100%;
+            }
+
+            .mail-contact {
+                line-height: 9vw;
+            }
+        }
+    }
+}
+
+@media (min-width: 641px) and (max-width: 924px) {
+
+    .container {
+        height: 80vw;
+        width: 80vw;
+	}
+
+    .quarter {
+        float: left;
+        height: 40vw;
+        position: relative;
+        width: 40vw;
+
+        &::before {
+            height: 38vw;
+            width: 38vw;
+		}
+
+        &::after {
+            height: 38vw;
+            width: 38vw;
+		}
+
+        .segment-mask {
+            height: 20vw;
+            width: 20vw;
+		}
+	}
+
+    .controls {
+        height: 18vw * 2;
+        left: 22vw;
+        top: 22vw;
+        width: 18vw * 2;
+
+        .name {
+            font-size: 8vw;
+            margin: 4.5vw 0 0;
+    	}
+
+        .main-controls-wrapper {
+
+            &:nth-child(3) {
+                margin-top: 2vw;
+            }
+        }
+
+        .control.display {
+            border-radius: 1vw;
+            margin-left: 1vw;
+
+            .count-text {
+                font-size: 3vw;
+                padding: 1vw;
+            }
+        }
+
+        .control.start {
+            @include box-shadow(longshadow(darken($bg, 30%), $bg, 20, .5));
+            border: .3vw solid $solid-shadow;
+            height: 4vw;
+            padding: 0;
+            width: 4vw;
+        }
+
+        .label.strict,
+        .label.power {
+
+            &::before {
+                @include box-shadow(longshadow(darken($bg, 30%), $bg, 20, .5));
+                border: .3vw solid $solid-shadow;
+                height: 3.4vw;
+                width: 3.4vw;
+            }
+        }
+
+        .control-label {
+            display: block;
+            font-size: 2vw;
+            margin-top: .4vw;
+        }
+    }
+
+    .modal-overlay {
+
+        .info-wrapper {
+            border-radius: 3vw;
+            box-shadow: 0 1vw 5vw 0 $shadow;
+            height: 50%;
+            margin: 2vw;
+            max-width: 100%;
+            padding: 0 2vw 2vw;
+
+            .project-info-text {
+                font-size: 2.5vw;
+                line-height: 4vw;
+            }
+
+            .project-details-wrapper {
+                padding: 0 4vw;
+            }
+
+            .project-title {
+                border-radius: 1.5vw;
+                font-size: 3.5vw;
+                letter-spacing: 3vw;
+                padding: 1vw;
+            }
+
+            .project-subtitle {
+                padding: 1vw;
+            }
+
+            .contact-wrapper {
+                padding: .5vw 0 0;
+            }
+
+            .contact-link {
+                font-size: 8vw;
+                padding: 1vw;
+            }
+
+            .contact-signature {
+                width: 100%;
+            }
+
+            .mail-contact {
+                line-height: 9vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 924px) {
+
+    @include quarter-borders(2.1vw, solid, $solid-shadow);
+    .logo,
+    .github {
+        margin: 2vw;
+        width: 20vw;
+    }
+}
+
+
+@media (min-width: 925px) {
+
+    @include quarter-borders(1.5vw, solid, $solid-shadow);
+
+    .container {
+        height: 46vw;
+        width: 46vw;
+	}
+
+    .logo,
+    .github {
+        margin: 2vw;
+        width: 10vw;
+    }
+
+    .quarter {
+        float: left;
+        height: 23vw;
+        position: relative;
+        width: 23vw;
+
+        &::before {
+            height: 21.6vw;
+            width: 21.6vw;
+		}
+
+        &::after {
+            height: 21.6vw;
+            width: 21.6vw;
+		}
+
+        .segment-mask {
+            height: 13vw;
+            width: 13vw;
+		}
+	}
+
+    .controls {
+        height: 12vw * 2;
+        left: 11vw;
+        top: 11vw;
+        width: 12vw * 2;
+
+        .name {
+            font-size: 5vw;
+            margin: 3vw 0 0;
+    	}
+
+        .main-controls-wrapper {
+
+            &:nth-child(3) {
+                margin-top: 2vw;
+            }
+        }
+
+        .control.display {
+            border-radius: 1vw;
+            margin-left: 1vw;
+
+            .count-text {
+                font-size: 2vw;
+                padding: .5vw;
+            }
+        }
+
+        .control.start {
+            @include box-shadow(longshadow(darken($bg, 30%), $bg, 20, .5));
+            border: .3vw solid $solid-shadow;
+            height: 3vw;
+            padding: 0;
+            width: 3vw;
+        }
+
+        .label.strict,
+        .label.power {
+
+            &::before {
+                @include box-shadow(longshadow(darken($bg, 30%), $bg, 20, .5));
+                border: .3vw solid $solid-shadow;
+                height: 2.3vw;
+                width: 2.3vw;
+            }
+        }
+
+        .control-label {
+            display: block;
+            font-size: 1vw;
+            margin-top: .4vw;
+        }
+    }
+
+    .modal-overlay {
+
+        .info-wrapper {
+            border-radius: 3vw;
+            box-shadow: 0 1vw 5vw 0 $shadow;
+            height: 50%;
+            margin: 2vw;
+            max-width: 50%;
+            padding: 0 2vw 2vw;
+
+            .project-info-text {
+                font-size: 1.3vw;
+                line-height: 2.2vw;
+            }
+
+            .project-title {
+                border-radius: 1.5vw;
+                font-size: 2vw;
+                letter-spacing: 1.5vw;
+                padding: 1vw;
+            }
+
+            .project-subtitle {
+                font-size: 2vw;
+                padding: 1vw;
+            }
+
+            .contact-wrapper {
+                padding: .5vw 0 0;
+            }
+
+            .contact-link {
+                font-size: 3vw;
+                padding: 1vw;
+            }
+
+            .contact-signature {
+                width: 100%;
+            }
+
+            .mail-contact {
+                line-height: 5vw;
+            }
+        }
+    }
+}
+
+.modal-overlay {
+    background: $shadow;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
+    .info-wrapper {
+        background: $bg;
+        opacity: 0;
+        position: relative;
+        transform: translateY(-2vw);
+        transition: transform .5s, opacity .5s;
+        transition-timing-function: ease-out;
+
+        .project-info-text {
+            font-family: Georgia, serif;
+        }
+
+        .project-title {
+            background: $solid-shadow;
+            color: $bg;
+            font-family: 'Circular Book';
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .project-subtitle {
+            font-family: 'Circular Book';
+            text-align: center;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contact-link {
+            color: $solid-shadow;
+            display: inline-block;
+        }
+    }
+}
