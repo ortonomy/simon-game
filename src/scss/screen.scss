@@ -28,6 +28,7 @@ body {
     background: $bg;
     display: flex;
     justify-content: center;
+    padding-top: 2vw;
     -webkit-tap-highlight-color: $no-shadow; //remove grey highlighting of taps in iOS safari;
 }
 
