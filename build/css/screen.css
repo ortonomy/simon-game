@@ -1,25 +1,16 @@
 @font-face {
   font-family: 'DSEG-7 Regular';
-  src: url("//ortonomy.co/static/fonts/DSEG7ClassicMini-Regular.ttf"); }
+  src: url("../fonts/DSEG7ClassicMini-Regular.ttf") format("truetype"); }
 @font-face {
   font-family: 'Circular Book';
-  src: url(//ortonomy.co/static/fonts/lineto-circular-book.ttf) format("truetype");
+  src: url("../fonts/lineto-circular-book.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Circular Black';
   font-style: normal;
   font-weight: bold;
-  src: url(//ortonomy.co/static/fonts/lineto-circular-black.ttf) format("truetype"); }
-@font-face {
-  font-family: 'Freight Text Book';
-  font-style: normal;
-  font-weight: normal;
-  src: url(//ortonomy.co/static/fonts/freight-text-book.ttf) format("truetype"); }
-.hidden-font {
-  display: none;
-  font-family: 'Freight Text book', Georgia, serif; }
-
+  src: url("../fonts/lineto-circular-black.ttf") format("truetype"); }
 body {
   background: #eee;
   display: -webkit-box;
