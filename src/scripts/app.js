@@ -300,13 +300,15 @@
         },
         lockUserInput: () => {
             console.log('locking user input');
-            (document.querySelectorAll('.quarter')).forEach( (el) => {
+            let touchAreas = document.querySelectorAll('.quarter');
+            Array.prototype.forEach.call(touchAreas, (el) => {
                 Game.disable(el, false);
             });
         },
         unlockUserInput: () => {
             console.log('unlocking user input');
-            (document.querySelectorAll('.quarter')).forEach( (el) => {
+            let touchAreas = document.querySelectorAll('.quarter');
+            Array.prototype.forEach.call(touchAreas, (el) => {
                 Game.enable(el, false);
             });
         },
