@@ -14,6 +14,8 @@
     // allow :active pseudo classes in safari
     document.addEventListener("touchstart", function(){}, true);
 
+    //TODO: add touch optimization so that too-slow or too-fast touches are captured, buffered and passed correctly to click handlers
+
     // Modal controller
     const Modal = {
         show: function (content) {
