@@ -41,7 +41,7 @@
     const projectTemplater = {
         info: {
             title: `Simon game`,
-            subtitle: `A browser-based version of the classic 70s-80s hand-held memory game.`,
+            subtitle: `A browser-based version of the classic 80s hand-held memory game.`,
             blurb: `Remember the sequence of lights and sounds, then press the buttons in the same order. See if you can achieve victory with a score of 20!`,
             projectFeatures: [
                 `First, switch the device on, and then begin a game by pressing the start button.`,
